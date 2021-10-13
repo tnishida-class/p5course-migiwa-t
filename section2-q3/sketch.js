@@ -8,11 +8,12 @@ function setup() {
   createCanvas(400, 400);
   background(255);
   stroke(255);
-  strokeWeight(3);
+  strokeWeight(3);//これから描く全てのものがストローク付きになるということか？
 
   const cx = width / 2; // 中心は (cx, cy)
   const cy = height / 2;
   const maxR = min(width, height); // 大きさは幅と高さのうち小さい方
+//幅と高さを指定すれば中心と大きさが決定されるということ？
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);

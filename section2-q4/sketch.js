@@ -43,8 +43,8 @@ function setup(){
    let e = 152 / 12
    let f = d * 7 / 10
 
-   for(let i = 0; i < 11; i++){
-     for(let j = 0; j < 9; i++){
+   for(let i = 0; i < 12; i++){
+     for(let j = 0; j < 10; i++){
        if((i % 2 == 1  && j % 2 == 1) || (i % 2 == 0 && i % 2 == 0)){
        fill(255);
        circle(e * j, f * i, 10);

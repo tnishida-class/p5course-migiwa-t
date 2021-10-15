@@ -40,24 +40,22 @@ function setup(){
    fill(0, 32, 91);//星条旗の青
    rect(0, 0, 152, d * 7);
 
-   let e = 152 / 12
-   let f = d * 7 / 10
 
-   for(let i = 0; i < 12; i++){
-     for(let j = 0; j < 10; i++){
-       if(i % 2 == 1  && j % 2 == 1){
+
+   for(let i = 0; i < 10; i++){
+     for(let j = 0; j < 12; i++){
+
+       let e = 152 / 12
+       let f = d * 7 / 10
+
+       if(j % 2 == 1  && j % 2 == 1){
        fill(255);
-       circle(e * j, f * i, 10);
+       circle(e * j, 10, 10);
        }
        if(i % 2 == 0 && i % 2 == 0){
          fill(255);
-         circle(e * j, f * i, 10)
+         circle(e * j, 10, 10)
        }
      }
    }
-}
-       fill(255);
-       circle();
-
-
 }

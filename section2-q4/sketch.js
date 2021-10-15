@@ -42,19 +42,19 @@ function setup(){
 
 
 
-   for(let i = 0; i < 10; i++){
-     for(let j = 0; j < 12; i++){
+   for(let j = 0; j < 10; j++){
+     for(let k = 0; k < 12; k++){
 
        let e = 152 / 12
        let f = d * 7 / 10
 
-       if(j % 2 == 1  && j % 2 == 1){
+       if(k % 2 == 1  && j % 2 == 1){
        fill(255);
-       circle(e * j, 10, 10);
+       circle(e * k, f * j, 10);
        }
-       if(i % 2 == 0 && i % 2 == 0){
+       if(k % 2 == 0 && j % 2 == 0){
          fill(255);
-         circle(e * j, 10, 10)
+         circle(e * k, f * j, 10)
        }
      }
    }

@@ -14,9 +14,14 @@ function setup(){
   let total = 0;
   for(let i = 0; i < scores.length; i++){
     total += scores[i];
-  　sum[i] += scores[i]
   }
 
+  let sum = 0;
+  for(let i = 0; i < scores.length; i++){
+  　sum += scores[i]
+    noFill();
+    arc(200, 200, 380, 380, -PI / 2, (-PI / 2) + PI * 2 * sum / total, PIE)
+  }
   // let px, py
   // px = i-1までの合計/total * (PI * 2) + (-PI / 2);
   // py = iまでの合計/total * (PI * 2) + (-PI / 2);

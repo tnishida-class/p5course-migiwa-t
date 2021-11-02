@@ -2,25 +2,16 @@
 // 練習問題：ボールのサイズをランダムに変更してみよう
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
-let balls = []; //配列を用意
-let gush = [];
+let balls = []; //
+balls.rength < 100
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
+  const startTime = 0
 }
 
-function draw(){
-  background(160, 192, 255);
-  const g = {x: width / 2, y: height / 2 , size: 20, vx: dx, vy: dy}
-  const dx = random(-100, 100)
-  const dy = random(-100, 100)
-  for(let k = 0; k < 100; k++){
-    let g = gush[k];  //gをボール配列のk番目だと定義する
-    ellipse(g.x, g.y, g.size); //円の中心がbのxの値とyの値、大きさはbのsizeで描画する
-    g.x += g.vx;  //速さを与える。xの座標はxvずつ増加していき、yの座標はxyずつ増加していく。
-    g.y += g.vy;　//それが動いて見える。
-  }
-}
+
+//アニメーション、時間経過とともに発生するように
 
 function draw(){
   background(160, 192, 255);
@@ -30,7 +21,13 @@ function draw(){
     b.x += b.vx;  //速さを与える。xの座標はxvずつ増加していき、yの座標はxyずつ増加していく。
     b.y += b.vy;　//それが動いて見える。
   }
-}
+
+
+  if(millis() / 1000 % 2){
+    const b = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
+    balls.push(b);
+  }
+ }
 
 function mouseDragged(){　//マウスがクリックされながら移動すること
   const dx = mouseX - pmouseX;　//xの移動距離

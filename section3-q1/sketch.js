@@ -9,12 +9,15 @@ function setup(){
   vx = 1
   a = width / 2
   b = height / 2
+  count = 0
+  cycle = 100
 }
 
 function draw(){
   background(160, 192, 255);　//←これなくても大丈夫。
+  count = (count + 1) % cycle
   fill(0, y, y * -1); //色で遊んでみても面白いかも
-  ellipse(a, b, x); //3-2は座標が移動したが今回は大きさが変化する
+  ellipse(a, b, count); //3-2は座標が移動したが今回は大きさが変化する
   x += vx; //定数１でも作動するが、方向を持たせたいので文字に置き換える 　
   y += vx
 
@@ -22,6 +25,7 @@ function draw(){
   if(keyIsDown(RIGHT_ARROW)){ a += 5; }
   if(keyIsDown(UP_ARROW)){ b -= 5; }
   if(keyIsDown(DOWN_ARROW)){ b += 5; }
+  if(keyIsDown(" ".charCodeAt(0))){count = (count + 1) % 200}
 
 
   a = constrain(a, 0, width);

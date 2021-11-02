@@ -25,7 +25,7 @@ function draw(){
   if(keyIsDown(RIGHT_ARROW)){ a += 5; }
   if(keyIsDown(UP_ARROW)){ b -= 5; }
   if(keyIsDown(DOWN_ARROW)){ b += 5; }
-  if(keyIsDown(" ".charCodeAt(0))){count = (count + 1) % 200}
+  if(keyIsDown("A".charCodeAt(0))){count = (count + 1) % 200}
 
 
   a = constrain(a, 0, width);

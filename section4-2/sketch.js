@@ -22,10 +22,15 @@ function draw(){
     b.y += b.vy;　//それが動いて見える。
   }
 
-
-  if(millis() / 1000 % 0){
-    const b = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
-    balls.push(b);
+startTime = millis()
+let ellapsedTime = (millis() - startTime) % 1000
+  if(ellapsedTime > 500){
+    const b1 = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
+    balls.push(b1);
+  }
+  else{
+    const b2 = { x: 0, y: 0, size: 0, vx: 0, vy: 0}
+    balls.push(b2)
   }
  }
 

@@ -23,7 +23,7 @@ function draw(){
   }
 
 
-  if(millis() / 1000 % 2){
+  if(millis() / 1000 % 0){
     const b = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
     balls.push(b);
   }

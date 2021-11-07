@@ -2,17 +2,14 @@
 // 練習問題：ボールのサイズをランダムに変更してみよう
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
-let balls = []; //
-balls.rength < 100
+let balls = [];
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  const startTime = 0
+  count = 0;
+  cycle = 100;
 }
-
-
 //アニメーション、時間経過とともに発生するように
-
 function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){
@@ -21,10 +18,9 @@ function draw(){
     b.x += b.vx;  //速さを与える。xの座標はxvずつ増加していき、yの座標はxyずつ増加していく。
     b.y += b.vy;　//それが動いて見える。
   }
-
-startTime = millis()
-let ellapsedTime = (millis() - startTime) % 1000
-  if(ellapsedTime > 500){
+// 心臓のアニメーションと同じような count を作って、それを条件式に使うという方法もあります。
+  count = (count + 1) % cycle
+  if(count % 20 == 0){
     const b1 = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
     balls.push(b1);
   }

@@ -4,7 +4,7 @@ function setup(){
   createCanvas(300, 100);
   background(200);
   fill(0);
-  crossmark(10, 10, 90, 90);
+  crossmark(10, 10, 90, 90);　//関数の初期値
   ngmark(150, 50, 80);
   star(250, 50, 40);
 }
@@ -18,19 +18,19 @@ function ngmark(cx, cy, r){
   push();
   noFill();
   strokeWeight(r * 0.1);
-  let d = sqrt(r * r / 8);
+  let d = sqrt(r * r / 8);//sqrtは平方根を計算する.式の意味はgoodnote参照
   ellipse(cx, cy, r);
   line(cx - d, cy - d, cx + d, cy + d);
-  pop();
+  pop();//これやらなかったら星に影響及ぼしちゃう
 }
 
 function star(cx, cy, r){
   beginShape();
-  for(var i = 0; i < 5; i++){
+  for(let i = 0; i < 5; i++){
     let theta = TWO_PI * i * 2 / 5 - HALF_PI;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
-    vertex(x,y);
+    vertex(x,y);//次に登場したやつ同士をくっつける
   }
   endShape(CLOSE);
 }

@@ -20,7 +20,7 @@ function draw(){
   }
 // 心臓のアニメーションと同じような count を作って、それを条件式に使うという方法もあります。
   count = (count + 1) % cycle
-  if(count % 20 == 0){
+  if(count % 20 == 0){ // count % 60 == 0でも良い
     const b1 = { x: random(0, width), y: 0, size: 20, vx: random(2), vy: random(2)};
     balls.push(b1);
   }

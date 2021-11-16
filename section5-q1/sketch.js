@@ -1,10 +1,11 @@
 // 練習問題：吹き出し
 // 吹き出しの位置、背景色 etc. を関数 balloon の引数で指定できるようにしてみよう
 // 吹き出しにしっぽを付けてみよう
+// 更新ごとにランダムに移動する吹き出し。
 function setup(){
   createCanvas(400, 400);
   background(255);
-  balloon(80, 50, "  I love keyakizaka46  ");
+  balloon(random(300), random(350), "  I love keyakizaka46  ");
 }
 
 function balloon(x, y, t){

@@ -6,10 +6,10 @@ function setup(){
   // isLeapYear の動作確認のため console に出力しています
   for(let i = 2000; i <= 2100; i++){
     if(isLeapYear(i)){
-      console.log(i + "年は366日です");
+      console.log(i + "年はうるうどしです");
     }
     else{
-      console.log(i + "年は365日です");
+      console.log(i + "年はうるうどしではありません");
     }
   }
 }
@@ -27,6 +27,12 @@ function isLeapYear(y){
 
 function daysInYear(y){
   // BLANK[1]
+  if(daysInYear(y)){
+    return 366;
+  }
+  else{
+    return 365;
+  }
 }
 
 function daysInMonth(y, m){

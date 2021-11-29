@@ -36,7 +36,7 @@ let h = 0;
 let a = 0;
 
 function draw(){
-  background(255, 255, 255);
+  background(220, 220, 220);
 
   push();
   stroke(253, 164, 42);
@@ -69,7 +69,7 @@ function draw(){
 
   push();
   noStroke();
-  fill(16, 16, 32);
+  fill(255, 255, 255);
   for(let i = 0; i < 11; i++){
   circle(dots[i].x, dots[i].y, 30);
   }
